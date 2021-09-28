@@ -1,0 +1,24 @@
+{
+  "name": "@storybook/testing-library",
+  "version": "0.0.0-alpha.1",
+  "description": "Instrumented version of Testing Library for Storybook Interactions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/storybookjs/testing-library.git"
+  },
+  "browser": "index.js",
+  "license": "MIT",
+  "files": [
+    "./index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@storybook/client-logger": "6.4.0-alpha.35",
+    "@storybook/instrumenter": "6.4.0-alpha.35",
+    "@testing-library/dom": "^8.3.0",
+    "@testing-library/user-event": "^13.2.1",
+    "ts-dedent": "^2.2.0"
+  }
+}
