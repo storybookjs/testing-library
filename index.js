@@ -6,7 +6,21 @@ import dedent from 'ts-dedent';
 
 const testingLibrary = instrument(
   { ...domTestingLibrary },
-  { intercept: (method, path) => path[0] === 'fireEvent' || method.startsWith('findBy') }
+  {
+    intercept: (method, path) => path[0] === 'fireEvent' || method.startsWith('findBy'),
+    getArgs: (call, state) => {
+      if (!state.isDebugging) return call.args;
+      if (call.method.startsWith('findBy')) {
+        const [value, queryOptions, waitForOptions] = call.args;
+        return [value, queryOptions, { ...waitForOptions, timeout: 60000, interval: Infinity }];
+      }
+      if (call.method.startsWith('waitFor')) {
+        const [callback, options] = call.args;
+        return [callback, { ...options, timeout: 60000, interval: Infinity }];
+      }
+      return call.args;
+    }
+  }
 );
 
 testingLibrary.screen = Object.entries(testingLibrary.screen).reduce(
