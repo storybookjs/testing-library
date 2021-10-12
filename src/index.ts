@@ -1,32 +1,27 @@
-import { once } from '@storybook/client-logger'
-import { instrument } from '@storybook/instrumenter'
-import * as domTestingLibrary from '@testing-library/dom'
-import _userEvent from '@testing-library/user-event'
-import dedent from 'ts-dedent'
+import { once } from '@storybook/client-logger';
+import { instrument } from '@storybook/instrumenter';
+import * as domTestingLibrary from '@testing-library/dom';
+import _userEvent from '@testing-library/user-event';
+import dedent from 'ts-dedent';
 
 const testingLibrary = instrument(
   { ...domTestingLibrary },
   {
-    intercept: (method, path) =>
-      path[0] === 'fireEvent' || method.startsWith('findBy'),
+    intercept: (method, path) => path[0] === 'fireEvent' || method.startsWith('findBy'),
     getArgs: (call, state) => {
-      if (!state.isDebugging) return call.args
+      if (!state.isDebugging) return call.args;
       if (call.method.startsWith('findBy')) {
-        const [value, queryOptions, waitForOptions] = call.args
-        return [
-          value,
-          queryOptions,
-          { ...waitForOptions, timeout: 60000, interval: Infinity },
-        ]
+        const [value, queryOptions, waitForOptions] = call.args;
+        return [value, queryOptions, { ...waitForOptions, timeout: 60000, interval: Infinity }];
       }
       if (call.method.startsWith('waitFor')) {
-        const [callback, options] = call.args
-        return [callback, { ...options, timeout: 60000, interval: Infinity }]
+        const [callback, options] = call.args;
+        return [callback, { ...options, timeout: 60000, interval: Infinity }];
       }
-      return call.args
-    },
+      return call.args;
+    }
   }
-)
+);
 
 testingLibrary.screen = Object.entries(testingLibrary.screen).reduce(
   (acc, [key, val]) =>
@@ -34,14 +29,13 @@ testingLibrary.screen = Object.entries(testingLibrary.screen).reduce(
       get() {
         once.warn(dedent`
           You are using Testing Library's \`screen\` object. Use \`within(canvasElement)\` instead.
-
           More info: https://storybook.js.org/docs/react/essentials/interactions
-        `)
-        return val
+        `);
+        return val;
       },
     }),
   testingLibrary.screen
-)
+);
 
 export const {
   buildQueries,
@@ -116,9 +110,6 @@ export const {
   waitForElementToBeRemoved,
   within,
   prettyFormat,
-} = testingLibrary
+} = testingLibrary;
 
-export const { userEvent } = instrument(
-  { userEvent: _userEvent },
-  { intercept: true }
-)
+export const { userEvent } = instrument({ userEvent: _userEvent }, { intercept: true });
