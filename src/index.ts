@@ -29,7 +29,6 @@ testingLibrary.screen = Object.entries(testingLibrary.screen).reduce(
       get() {
         once.warn(dedent`
           You are using Testing Library's \`screen\` object. Use \`within(canvasElement)\` instead.
-
           More info: https://storybook.js.org/docs/react/essentials/interactions
         `);
         return val;
@@ -38,7 +37,6 @@ testingLibrary.screen = Object.entries(testingLibrary.screen).reduce(
   testingLibrary.screen
 );
 
-// console.log(Object.keys(domTestingLibrary).join(',\n'));
 export const {
   buildQueries,
   configure,

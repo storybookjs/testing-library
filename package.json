@@ -6,19 +6,29 @@
     "type": "git",
     "url": "https://github.com/storybookjs/testing-library.git"
   },
-  "browser": "index.js",
+  "browser": "dist/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
   "files": [
-    "./index.js"
+    "dist/**/*"
   ],
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@storybook/client-logger": "6.4.0-alpha.35",
-    "@storybook/instrumenter": "6.4.0-alpha.35",
+    "@storybook/client-logger": "6.4.0-beta.9",
+    "@storybook/instrumenter": "6.4.0-beta.9",
     "@testing-library/dom": "^8.3.0",
     "@testing-library/user-event": "^13.2.1",
     "ts-dedent": "^2.2.0"
+  },
+  "devDependencies": {
+    "tsc": "^2.0.3",
+    "typescript": "^4.4.3"
   }
 }
