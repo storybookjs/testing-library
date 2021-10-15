@@ -4,6 +4,11 @@ import * as domTestingLibrary from '@testing-library/dom';
 import _userEvent from '@testing-library/user-event';
 import dedent from 'ts-dedent';
 
+const debugOptions = {
+  timeout: Number.MAX_SAFE_INTEGER,
+  interval: Number.MAX_SAFE_INTEGER,
+};
+
 const testingLibrary = instrument(
   { ...domTestingLibrary },
   {
@@ -12,14 +17,14 @@ const testingLibrary = instrument(
       if (!state.isDebugging) return call.args;
       if (call.method.startsWith('findBy')) {
         const [value, queryOptions, waitForOptions] = call.args;
-        return [value, queryOptions, { ...waitForOptions, timeout: 60000, interval: Infinity }];
+        return [value, queryOptions, { ...waitForOptions, ...debugOptions }];
       }
       if (call.method.startsWith('waitFor')) {
         const [callback, options] = call.args;
-        return [callback, { ...options, timeout: 60000, interval: Infinity }];
+        return [callback, { ...options, ...debugOptions }];
       }
       return call.args;
-    }
+    },
   }
 );
 
