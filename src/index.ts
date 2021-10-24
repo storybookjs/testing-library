@@ -5,8 +5,8 @@ import _userEvent from '@testing-library/user-event';
 import dedent from 'ts-dedent';
 
 const debugOptions = {
-  timeout: Number.MAX_SAFE_INTEGER,
-  interval: Number.MAX_SAFE_INTEGER,
+  timeout: 2147483647, // max valid timeout duration
+  interval: 2147483647,
 };
 
 const testingLibrary = instrument(
