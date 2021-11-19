@@ -1,6 +1,6 @@
 {
   "name": "@storybook/testing-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Instrumented version of Testing Library for Storybook Interactions",
   "repository": {
     "type": "git",
