@@ -39,7 +39,7 @@ testingLibrary.screen = Object.entries(testingLibrary.screen).reduce(
         return val;
       },
     }),
-  testingLibrary.screen
+  { ...testingLibrary.screen }
 );
 
 export const {
