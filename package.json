@@ -20,14 +20,15 @@
     "access": "public"
   },
   "dependencies": {
-    "@storybook/client-logger": "6.4.0-beta.12",
-    "@storybook/instrumenter": "6.4.0-beta.12",
+    "@storybook/client-logger": "6.4.0-rc.5",
+    "@storybook/instrumenter": "6.4.0-rc.5",
     "@testing-library/dom": "^8.3.0",
     "@testing-library/user-event": "^13.2.1",
     "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
     "@storybook/linter-config": "^3.1.2",
+    "@types/react": "*",
     "tsc": "^2.0.3",
     "typescript": "^4.4.3"
   }
