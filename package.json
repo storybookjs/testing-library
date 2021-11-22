@@ -6,16 +6,19 @@
     "type": "git",
     "url": "https://github.com/storybookjs/testing-library.git"
   },
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "prepack": "npm run build"
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "prepack": "yarn build"
   },
   "files": [
     "dist/**/*"
   ],
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -29,7 +32,6 @@
   "devDependencies": {
     "@storybook/linter-config": "^3.1.2",
     "@types/react": "*",
-    "tsc": "^2.0.3",
     "typescript": "^4.4.3"
   }
 }
