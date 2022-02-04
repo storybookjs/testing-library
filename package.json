@@ -18,6 +18,7 @@
     "prerelease": "yarn build",
     "release": "auto shipit"
   },
+  "author": "yannbf@gmail.com",
   "files": [
     "dist/**/*"
   ],
