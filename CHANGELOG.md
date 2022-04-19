@@ -1,3 +1,25 @@
+# v0.0.10 (Tue Apr 19 2022)
+
+### Release Notes
+
+#### feat: upgrade testing library and user event ([#18](https://github.com/storybookjs/testing-library/pull/18))
+
+`@storybook/testing-library` now uses `@testing-library/user-event` **version 14**! 🎉 
+
+There are several new features and bugfixes and you can check them in the [user-event release page](https://github.com/testing-library/user-event/releases/tag/v14.0.0).
+
+---
+
+#### 🐛 Bug Fix
+
+- feat: upgrade testing library and user event [#18](https://github.com/storybookjs/testing-library/pull/18) ([@yannbf](https://github.com/yannbf))
+
+#### Authors: 1
+
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.0.9 (Fri Feb 04 2022)
 
 :tada: This release contains work from new contributors! :tada:
