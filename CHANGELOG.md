@@ -1,3 +1,25 @@
+# v0.0.11 (Thu Apr 21 2022)
+
+### Release Notes
+
+#### Revert "feat: upgrade testing library and user event" ([#19](https://github.com/storybookjs/testing-library/pull/19))
+
+Unfortunately `@storybook/testing-library` had to downgrade `@testing-library/user-event` to version 13. User event v14 is working ok for most projects, but projects using Svelte, Vue, HTML and Web components break because of an issue in one of user-event's dependencies.
+
+If you are not affected by this problem and want to use `@storybook/testing-library` with user-event v14, you can use the `@storybook/testing-library@beta` version.
+
+---
+
+#### 🐛 Bug Fix
+
+- Revert "feat: upgrade testing library and user event" [#19](https://github.com/storybookjs/testing-library/pull/19) ([@yannbf](https://github.com/yannbf))
+
+#### Authors: 1
+
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.0.10 (Tue Apr 19 2022)
 
 ### Release Notes
