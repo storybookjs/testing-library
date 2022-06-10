@@ -1,3 +1,15 @@
+# v0.0.12 (Fri Jun 10 2022)
+
+#### 🐛 Bug Fix
+
+- loosen version ranges of storybook so we can start bench testing 7.0.0 alpha releases [#21](https://github.com/storybookjs/testing-library/pull/21) ([@ndelangen](https://github.com/ndelangen))
+
+#### Authors: 1
+
+- Norbert de Langen ([@ndelangen](https://github.com/ndelangen))
+
+---
+
 # v0.0.11 (Thu Apr 21 2022)
 
 ### Release Notes
