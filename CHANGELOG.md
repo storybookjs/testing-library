@@ -1,3 +1,15 @@
+# v0.0.13 (Mon Jun 13 2022)
+
+#### 🐛 Bug Fix
+
+- Fix dependency of @storybook/instrumenter [#22](https://github.com/storybookjs/testing-library/pull/22) ([@yannbf](https://github.com/yannbf))
+
+#### Authors: 1
+
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.0.12 (Fri Jun 10 2022)
 
 #### 🐛 Bug Fix
