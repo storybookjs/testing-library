@@ -4,27 +4,11 @@ import * as domTestingLibrary from '@testing-library/dom';
 import _userEvent from '@testing-library/user-event';
 import dedent from 'ts-dedent';
 
-const debugOptions = {
-  timeout: 2147483647, // max valid timeout duration
-  interval: 2147483647,
-};
-
 const testingLibrary = instrument(
   { ...domTestingLibrary },
   {
-    intercept: (method, path) => path[0] === 'fireEvent' || method.startsWith('findBy'),
-    getArgs: (call, state) => {
-      if (!state.isDebugging) return call.args;
-      if (call.method.startsWith('findBy')) {
-        const [value, queryOptions, waitForOptions] = call.args;
-        return [value, queryOptions, { ...waitForOptions, ...debugOptions }];
-      }
-      if (call.method.startsWith('waitFor')) {
-        const [callback, options] = call.args;
-        return [callback, { ...options, ...debugOptions }];
-      }
-      return call.args;
-    },
+    intercept: (method, path) =>
+      path[0] === 'fireEvent' || method.startsWith('findBy') || method.startsWith('waitFor'),
   }
 );
 
