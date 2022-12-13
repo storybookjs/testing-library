@@ -48,7 +48,12 @@
       "prerelease"
     ],
     "plugins": [
-      "npm",
+      [
+        "npm",
+        {
+          "legacyAuth": true
+        }
+      ],
       "first-time-contributor",
       "released"
     ]
