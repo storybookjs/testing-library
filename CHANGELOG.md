@@ -1,3 +1,26 @@
+# v0.1.0 (Mon Apr 03 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Kasper Peulen ([@kasperpeulen](https://github.com/kasperpeulen)), for all your work!
+
+#### 🚀 Enhancement
+
+
+#### 🐛 Bug Fix
+
+- Support Storybook 7.0.0 [#34](https://github.com/storybookjs/testing-library/pull/34) ([@yannbf](https://github.com/yannbf))
+- Make `waitFor` interceptable and don't override interval/timeout [#23](https://github.com/storybookjs/testing-library/pull/23) ([@ghengeveld](https://github.com/ghengeveld) [@yannbf](https://github.com/yannbf))
+- support storybook 7.0 [#30](https://github.com/storybookjs/testing-library/pull/30) ([@yannbf](https://github.com/yannbf))
+
+#### Authors: 3
+
+- Gert Hengeveld ([@ghengeveld](https://github.com/ghengeveld))
+- Kasper Peulen ([@kasperpeulen](https://github.com/kasperpeulen))
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.0.13 (Mon Jun 13 2022)
 
 #### 🐛 Bug Fix
