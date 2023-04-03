@@ -27,24 +27,33 @@
     "access": "public"
   },
   "dependencies": {
-    "@storybook/client-logger": "^6.4.0",
-    "@storybook/instrumenter": "^6.4.0",
+    "@storybook/client-logger": "^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0",
+    "@storybook/instrumenter": "^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0",
     "@testing-library/dom": "^8.3.0",
     "@testing-library/user-event": "^13.2.1",
     "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
-    "@auto-it/first-time-contributor": "^10.32.6",
-    "@auto-it/released": "^10.32.6",
+    "@auto-it/first-time-contributor": "^10.37.6",
+    "@auto-it/released": "^10.37.6",
     "@storybook/linter-config": "^3.1.2",
     "@types/react": "*",
-    "auto": "^10.32.6",
+    "auto": "^10.37.6",
     "rimraf": "^3.0.2",
     "typescript": "^4.4.3"
   },
   "auto": {
+    "prereleaseBranches": [
+      "next",
+      "prerelease"
+    ],
     "plugins": [
-      "npm",
+      [
+        "npm",
+        {
+          "legacyAuth": true
+        }
+      ],
       "first-time-contributor",
       "released"
     ]
