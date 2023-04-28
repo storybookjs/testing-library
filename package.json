@@ -43,7 +43,8 @@
   "auto": {
     "prereleaseBranches": [
       "next",
-      "prerelease"
+      "prerelease",
+      "future"
     ],
     "plugins": [
       [
