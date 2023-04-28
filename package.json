@@ -6,8 +6,8 @@
     "type": "git",
     "url": "https://github.com/storybookjs/testing-library.git"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "license": "MIT",
   "scripts": {
     "build": "tsup",
@@ -19,7 +19,7 @@
   "files": [
     "dist/**/*"
   ],
-  "types": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
