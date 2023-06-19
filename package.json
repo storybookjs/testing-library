@@ -6,14 +6,11 @@
     "type": "git",
     "url": "https://github.com/storybookjs/testing-library.git"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "license": "MIT",
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc --project tsconfig.esm.json",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build": "tsup",
     "prepack": "yarn build",
     "prerelease": "yarn build",
     "release": "auto shipit"
@@ -22,30 +19,32 @@
   "files": [
     "dist/**/*"
   ],
-  "types": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@storybook/client-logger": "^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0",
-    "@storybook/instrumenter": "^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0",
     "@testing-library/dom": "^8.3.0",
     "@testing-library/user-event": "^13.2.1",
     "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
+    "@storybook/client-logger": "next",
+    "@storybook/instrumenter": "next",
     "@auto-it/first-time-contributor": "^10.37.6",
     "@auto-it/released": "^10.37.6",
     "@storybook/linter-config": "^3.1.2",
     "@types/react": "*",
     "auto": "^10.37.6",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.4.3"
+    "util": "^0.12.5",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
   },
   "auto": {
     "prereleaseBranches": [
       "next",
-      "prerelease"
+      "prerelease",
+      "future"
     ],
     "plugins": [
       [
