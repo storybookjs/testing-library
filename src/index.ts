@@ -1,8 +1,11 @@
 import { once } from '@storybook/client-logger';
 import { instrument } from '@storybook/instrumenter';
 import * as domTestingLibrary from '@testing-library/dom';
-import _userEvent from '@testing-library/user-event';
+import _userEventObj from '@testing-library/user-event';
 import dedent from 'ts-dedent';
+
+// @ts-ignore (this is to ensure ESM compatibility)
+const _userEvent: typeof _userEventObj = _userEventObj.default || _userEventObj;
 
 const testingLibrary = instrument(
   { ...domTestingLibrary },
@@ -101,4 +104,9 @@ export const {
   prettyFormat,
 } = testingLibrary;
 
-export const { userEvent } = instrument({ userEvent: _userEvent }, { intercept: true });
+const userEvent: typeof _userEventObj = instrument(
+  { userEvent: _userEvent },
+  { intercept: true }
+).userEvent;
+
+export { userEvent };
