@@ -1,3 +1,46 @@
+# v0.2.0 (Tue Jun 20 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Vanessa Yuen ([@vanessayuenn](https://github.com/vanessayuenn)), for all your work!
+
+### Release Notes
+
+#### Release 0.2.0 ([#46](https://github.com/storybookjs/testing-library/pull/46))
+
+`@storybook/testing-library` now uses `@testing-library/dom` **version 9** and `@testing-library/user-event` **version 14**! 🎉 
+
+To refer to new features and bugfixes and you can check them in the [user-event release page](https://github.com/testing-library/user-event/releases/tag/v14.0.0) and [testing-library dom release page](https://github.com/testing-library/dom-testing-library/releases/tag/v9.0.0).
+
+#### Upgrade user-event to v14 and testing-library to v9 ([#43](https://github.com/storybookjs/testing-library/pull/43))
+
+`@storybook/testing-library` now uses `@testing-library/dom` **version 9** and `@testing-library/user-event` **version 14**! 🎉 
+
+To refer to new features and bugfixes and you can check them in the [user-event release page](https://github.com/testing-library/user-event/releases/tag/v14.0.0) and [testing-library dom release page](https://github.com/testing-library/dom-testing-library/releases/tag/v9.0.0).
+
+---
+
+#### 🚀 Enhancement
+
+- Release 0.2.0 [#46](https://github.com/storybookjs/testing-library/pull/46) ([@yannbf](https://github.com/yannbf) [@ndelangen](https://github.com/ndelangen) [@vanessayuenn](https://github.com/vanessayuenn))
+- Upgrade user-event to v14 and testing-library to v9 [#43](https://github.com/storybookjs/testing-library/pull/43) ([@yannbf](https://github.com/yannbf))
+- migrate to tsup (again) [#38](https://github.com/storybookjs/testing-library/pull/38) ([@ndelangen](https://github.com/ndelangen))
+
+#### 🐛 Bug Fix
+
+- Lower testing library dependency range [#47](https://github.com/storybookjs/testing-library/pull/47) ([@yannbf](https://github.com/yannbf))
+- Change Storybook dependencies from `future` npm tag to `next` [#44](https://github.com/storybookjs/testing-library/pull/44) ([@yannbf](https://github.com/yannbf))
+- Revert "migrate to tsup" [#37](https://github.com/storybookjs/testing-library/pull/37) ([@ndelangen](https://github.com/ndelangen))
+- migrate to tsup [#36](https://github.com/storybookjs/testing-library/pull/36) ([@ndelangen](https://github.com/ndelangen))
+
+#### Authors: 3
+
+- Norbert de Langen ([@ndelangen](https://github.com/ndelangen))
+- Vanessa Yuen ([@vanessayuenn](https://github.com/vanessayuenn))
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.1.0 (Mon Apr 03 2023)
 
 :tada: This release contains work from a new contributor! :tada:
