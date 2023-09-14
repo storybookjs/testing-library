@@ -3,6 +3,7 @@
     "strict": true,
     "target": "es2020",
     "moduleResolution": "nodenext",
+    "module": "NodeNext",
     "allowSyntheticDefaultImports": true
   },
   "include": ["src/*.ts"]
