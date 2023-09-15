@@ -1,3 +1,20 @@
+# v0.2.1 (Fri Sep 15 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Valentin Palkovic ([@valentinpalkovic](https://github.com/valentinpalkovic)), for all your work!
+
+#### 🐛 Bug Fix
+
+- Temporarily fix user-event to 14.4.0 to avoid compatibility issues [#53](https://github.com/storybookjs/testing-library/pull/53) ([@yannbf](https://github.com/yannbf))
+
+#### Authors: 2
+
+- Valentin Palkovic ([@valentinpalkovic](https://github.com/valentinpalkovic))
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.2.0 (Tue Jun 20 2023)
 
 :tada: This release contains work from a new contributor! :tada:
