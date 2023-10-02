@@ -1,3 +1,15 @@
+# v0.2.2 (Mon Oct 02 2023)
+
+#### 🐛 Bug Fix
+
+- Revert: Temporarily fix user-event to 14.4.0 to avoid compatibility issues [#57](https://github.com/storybookjs/testing-library/pull/57) ([@yannbf](https://github.com/yannbf))
+
+#### Authors: 1
+
+- Yann Braga ([@yannbf](https://github.com/yannbf))
+
+---
+
 # v0.2.1 (Fri Sep 15 2023)
 
 :tada: This release contains work from a new contributor! :tada:
